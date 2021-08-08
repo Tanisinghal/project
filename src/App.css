@@ -1,38 +1,127 @@
 .App {
   text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+#precaution {
+  color: rgba(0, 71, 171, 1);
+  font-weight: bolder;
+  margin: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#markerCoverage {
+  background-color: rgba(255, 192, 61, 1);
+  padding: 20px;
+}
+hr {
+  height: 2px;
+  background-color: darkgray;
+}
+.itemOfReview {
+  word-wrap: break-word;
+  background-color: white;
+  padding: 10px;
+  margin: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.NavButtons {
+  border-radius: 50%;
+  height: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#chap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  position: absolute;
+}
+
+.caregiver-column h2 span {
+  color: #ff8400;
+  font-family: "Montserrat";
+}
+.caregiver-column .container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.caregiver-column {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.caregiver-column:before {
+  content: "";
+  background: url("../src/image/Group.png") no-repeat center center/cover;
+  position: absolute;
+  width: 900px;
+  height: 82.9px;
+  top: 152px;
+  left: 250px;
+  z-index: 5;
+}
+
+.caregiver-column .container.caregiverItems {
+  height: 200px;
+  width: 250px;
+  padding: 10px;
+  margin: 50px 50px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  text-align: center;
+  letter-spacing: -0.005em;
 }
 
-.App-link {
-  color: #61dafb;
+.icons {
+  padding: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 768px) and (min-width: 400px) {
+  #caregiver {
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start; */
+    width: 400px;
+    height: 1080px;
+    background-color: lawngreen;
   }
-  to {
-    transform: rotate(360deg);
+
+  .icons .container {
+    /* width: 360px;
+    height: 1080px; */
+    top: 1040px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #caregiver::before {
+    background: hidden;
+  }
+
+  #chap {
+    position: relative;
+    width: 360px;
+    height: 462px;
+    top: 2120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #chap img {
+    width: 200px;
+    height: 166.25px;
+    left: 64px;
+  }
+  #chap #text {
+    position: static;
+    width: 328px;
+    height: 162px;
+    left: 0px;
+    top: 206.25px;
   }
 }
